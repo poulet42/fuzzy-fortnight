@@ -1,0 +1,12 @@
+{
+  "data": [
+    {"channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544812820421},
+    {"channel": "private", "content": "Ceci est le second message du channel privé","ts": 1544812830622},
+    {"channel": "private", "content": "Incroyable on dirait presque un vrai chat","ts": 1544812880721},
+    {"channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817890583},
+    {"channel": "public", "content": "Bonjour, ceci est le premier message du channel public", "ts": 1544817910583},
+    {"channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817980585},
+    {"channel": "public", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817980788},
+    {"channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817990883}
+  ]
+}

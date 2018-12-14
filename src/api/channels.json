@@ -1,0 +1,6 @@
+{
+  "data": [
+    {"id": "private", "label": "Privé"},
+    {"id": "public", "label": "Public"}
+  ]
+}
