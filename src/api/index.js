@@ -20,5 +20,5 @@ export const getChannelMessages = channelId =>
 
 export const sendMessageToChannel = ({ channel, content }) =>
   new Promise(resolve => {
-    setTimeout(resolve, 600, { id: uuid(), ts: Date.now(), content, channel });
+    setTimeout(resolve, 0, { id: uuid(), ts: Date.now(), content, channel });
   });

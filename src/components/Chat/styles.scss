@@ -1,10 +1,36 @@
 .Chat {
   display: flex;
+  height: 100%;
+
   &__aside {
     width: 240px;
+    background-color: #f56b2a;
+  }
+
+  &__channel-btn {
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    &--selected {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    &::before {
+      content: "#";
+    }
   }
 
   &__main {
-    flex: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__messages {
+    flex-grow: 1;
   }
 }

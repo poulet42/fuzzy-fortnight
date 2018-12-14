@@ -1,20 +1,20 @@
 import React from "react";
+import cx from "classnames";
 
-const ChannelsList = ({ channels, onChannelChange }) => (
+const ChannelsList = ({ channels, selected, onChannelChange }) => (
   <aside className="Chat__aside">
     <nav className="Chat__nav">
-      <ul>
-        {channels.map(({ id, label }) => (
-          <li key={id}>
-            <button
-              className="Chat__channel-btn"
-              onClick={() => onChannelChange(id)}
-            >
-              {label}
-            </button>
-          </li>
-        ))}
-      </ul>
+      {channels.map(({ id, label }) => (
+        <button
+          key={id}
+          className={cx("Chat__channel-btn", {
+            "Chat__channel-btn--selected": selected === id
+          })}
+          onClick={() => onChannelChange(id)}
+        >
+          {label}
+        </button>
+      ))}
     </nav>
   </aside>
 );

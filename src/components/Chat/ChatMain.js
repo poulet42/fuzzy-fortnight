@@ -1,6 +1,7 @@
 import React from "react";
 import { getChannelMessages, sendMessageToChannel } from "../../api";
 import prettyDate from "../../utils/prettyDate";
+import ChatInput from "./ChatInput";
 
 class ChatMain extends React.Component {
   state = {
@@ -17,9 +18,9 @@ class ChatMain extends React.Component {
     });
   }
 
-  onMessageSend = content => {
+  sendMessage = content => {
     const { channel } = this.props;
-    sendMessageToChannel(channel, content).then(serverMessage => {
+    sendMessageToChannel({ channel, content }).then(serverMessage => {
       this.setState(s => ({
         messages: [...s.messages, serverMessage]
       }));
@@ -38,10 +39,7 @@ class ChatMain extends React.Component {
             </div>
           ))}
         </div>
-        <form className="Chat__input-wrapper">
-          <input type="text" className="Chat__input" />
-          <input type="submit" hidden />
-        </form>
+        <ChatInput onMessageSend={this.sendMessage} />
       </main>
     );
   }

@@ -1,14 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Chat from "./components/Chat";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Chat />
-      </div>
-    );
-  }
-}
+const App = () => <Chat />;
 
 export default App;
