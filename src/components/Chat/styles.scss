@@ -1,0 +1,10 @@
+.Chat {
+  display: flex;
+  &__aside {
+    width: 240px;
+  }
+
+  &__main {
+    flex: 1;
+  }
+}
