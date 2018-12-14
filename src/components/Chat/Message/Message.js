@@ -22,8 +22,8 @@ const Message = ({ id, ts, content, username }) => (
 Message.propTypes = {
   id: pp.string.isRequired,
   ts: pp.oneOfType([pp.number, pp.instanceOf(Date)]),
-  content: pp.text,
-  username: pp.text
+  content: pp.string,
+  username: pp.string
 };
 
 Message.defaultProps = {

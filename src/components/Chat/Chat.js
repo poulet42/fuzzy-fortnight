@@ -26,11 +26,13 @@ class Chat extends React.Component {
     const { channels, selected } = this.state;
     return (
       <div className="Chat">
-        <ChatNav
-          channels={channels}
-          onChannelChange={this.changeChannel}
-          selected={selected}
-        />
+        <aside className="Chat__aside">
+          <ChatNav
+            channels={channels}
+            onChannelChange={this.changeChannel}
+            selected={selected}
+          />
+        </aside>
         {selected && <ChatMain channel={selected} />}
       </div>
     );

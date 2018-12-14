@@ -2,6 +2,7 @@ import React from "react";
 import { getChannelMessages, sendMessageToChannel } from "../../api";
 import ChatInput from "./ChatInput";
 import Message from "./Message";
+import Loader from "../Loader";
 
 class ChatMain extends React.Component {
   state = {
@@ -38,19 +39,27 @@ class ChatMain extends React.Component {
   };
 
   render() {
-    const { messages } = this.state;
+    const { messages, loading } = this.state;
     const { channel } = this.props;
     return (
       <main className="Chat__main">
-        <div className="Chat__messages">
-          {messages.map(msgProps => (
-            <Message {...msgProps} />
-          ))}
-        </div>
-        <ChatInput
-          onMessageSend={this.sendMessage}
-          placeholder={`Envoyer un message au channel ${channel}`}
-        />
+        {loading ? (
+          <div className="Chat__main-overlay">
+            <Loader />
+          </div>
+        ) : (
+          <>
+            <div className="Chat__messages">
+              {messages.map(msgProps => (
+                <Message key={msgProps.id} {...msgProps} />
+              ))}
+            </div>
+            <ChatInput
+              onMessageSend={this.sendMessage}
+              placeholder={`Envoyer un message au channel ${channel}`}
+            />
+          </>
+        )}
       </main>
     );
   }

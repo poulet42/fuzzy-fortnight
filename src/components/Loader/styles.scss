@@ -1,0 +1,16 @@
+.Loader {
+  animation: rotating 1s ease-in-out infinite;
+  transform-origin: center;
+  & > svg {
+    display: block;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
