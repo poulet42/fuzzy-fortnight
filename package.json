@@ -1,0 +1,9 @@
+{
+  "name": "test-chat",
+  "version": "0.0.1",
+  "description": "simple chat implementation",
+  "main": "index.js",
+  "repository": "https://github.com/poulet42/fuzzy-fortnight.git",
+  "author": "Corentin Prune <corentin@kicklox.com>",
+  "license": "MIT"
+}
