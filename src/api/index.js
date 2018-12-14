@@ -13,12 +13,15 @@ export const getChannelMessages = channelId =>
   new Promise(resolve => {
     setTimeout(
       resolve,
-      3000,
+      2000,
       messages.data.filter(m => m.channel === channelId)
     );
   });
 
-export const sendMessageToChannel = ({ channel, content }) =>
-  new Promise(resolve => {
-    setTimeout(resolve, 0, { id: uuid(), ts: Date.now(), content, channel });
+export const sendMessageToChannel = ({ channel, content }) => {
+  const newMessage = { id: uuid(), ts: Date.now(), content, channel };
+  messages.data = [...messages.data, newMessage]; // can mutate import properties
+  return new Promise(resolve => {
+    setTimeout(resolve, 0, newMessage); // a "POST" query should return the newly created item
   });
+};
