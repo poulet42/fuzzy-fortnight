@@ -21,6 +21,7 @@ class ChatInput extends React.Component {
 
   render() {
     const { message } = this.state;
+    const { placeholder } = this.props;
     return (
       <form className="Chat__input-wrapper" onSubmit={this.handleMessageSubmit}>
         <input
@@ -28,6 +29,7 @@ class ChatInput extends React.Component {
           className="Chat__input"
           value={message}
           onChange={this.handleMessageChange}
+          placeholder={placeholder}
         />
         <input type="submit" hidden />
       </form>

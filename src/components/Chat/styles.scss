@@ -31,6 +31,26 @@
   }
 
   &__messages {
-    flex-grow: 1;
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+  }
+
+  &__input-wrapper {
+    display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #717274;
+    height: 40px;
+    margin: 0 20px 20px 20px;
+    padding: 6px 10px;
+    outline-style: none;
+    font-size: 14px;
+    &::placeholder {
+      color: #c0c0c0;
+    }
   }
 }

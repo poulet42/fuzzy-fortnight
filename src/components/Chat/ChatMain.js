@@ -1,7 +1,7 @@
 import React from "react";
 import { getChannelMessages, sendMessageToChannel } from "../../api";
-import prettyDate from "../../utils/prettyDate";
 import ChatInput from "./ChatInput";
+import Message from "./Message";
 
 class ChatMain extends React.Component {
   state = {
@@ -9,13 +9,23 @@ class ChatMain extends React.Component {
     loading: true
   };
 
-  componentDidMount() {
+  loadMessages = () => {
+    this.setState({ loading: true });
     getChannelMessages(this.props.channel).then(messages => {
       this.setState({
         messages,
         loading: false
       });
     });
+  };
+  componentDidMount() {
+    this.loadMessages();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.channel !== this.props.channel) {
+      this.loadMessages();
+    }
   }
 
   sendMessage = content => {
@@ -29,17 +39,18 @@ class ChatMain extends React.Component {
 
   render() {
     const { messages } = this.state;
+    const { channel } = this.props;
     return (
       <main className="Chat__main">
         <div className="Chat__messages">
-          {messages.map(({ id, ts, content }) => (
-            <div key={id} className="Chat__message">
-              <time dateTime={ts}>{prettyDate(ts)}</time>
-              <span>{content}</span>
-            </div>
+          {messages.map(msgProps => (
+            <Message {...msgProps} />
           ))}
         </div>
-        <ChatInput onMessageSend={this.sendMessage} />
+        <ChatInput
+          onMessageSend={this.sendMessage}
+          placeholder={`Envoyer un message au channel ${channel}`}
+        />
       </main>
     );
   }
