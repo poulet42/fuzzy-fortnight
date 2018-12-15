@@ -67,6 +67,12 @@
       color: #c0c0c0;
     }
   }
+  &__aside-overlay {
+    @extend %overlay;
+    background-color: #f56b2a;
+    font-size: 32px;
+    color: #fff;
+  }
   &__main-overlay {
     @extend %overlay;
     background-color: #fff;

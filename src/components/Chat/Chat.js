@@ -3,17 +3,20 @@ import { getChannels } from "../../api";
 import ChatNav from "./ChatNav";
 import ChatMain from "./ChatMain";
 import "./styles.scss";
+import Loader from "../Loader";
 
 class Chat extends React.Component {
   state = {
     channels: [],
-    selected: null
+    selected: null,
+    loading: true
   };
 
   componentDidMount() {
     getChannels().then(channels => {
       this.setState({
-        channels
+        channels,
+        loading: false
       });
     });
   }
@@ -23,15 +26,21 @@ class Chat extends React.Component {
   };
 
   render() {
-    const { channels, selected } = this.state;
+    const { channels, selected, loading } = this.state;
     return (
       <div className="Chat">
         <aside className="Chat__aside">
-          <ChatNav
-            channels={channels}
-            onChannelChange={this.changeChannel}
-            selected={selected}
-          />
+          {loading ? (
+            <div className="Chat__aside-overlay">
+              <Loader />
+            </div>
+          ) : (
+            <ChatNav
+              channels={channels}
+              onChannelChange={this.changeChannel}
+              selected={selected}
+            />
+          )}
         </aside>
         {selected && <ChatMain channel={selected} />}
       </div>
