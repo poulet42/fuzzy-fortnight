@@ -12,7 +12,9 @@ class ChatMain extends React.Component {
 
   loadMessages = () => {
     this.setState({ loading: true });
+    const channel = this.props.channel;
     getChannelMessages(this.props.channel).then(messages => {
+      if (channel !== this.props.channel) return;
       this.setState({
         messages,
         loading: false
