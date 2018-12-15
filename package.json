@@ -3,11 +3,13 @@
   "version": "0.0.1",
   "description": "simple chat implementation",
   "repository": "https://github.com/poulet42/fuzzy-fortnight.git",
+  "homepage": "https://poulet42.github.io/fuzzy-fortnight",
   "author": "Corentin Prune <corentin@kicklox.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -16,6 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
