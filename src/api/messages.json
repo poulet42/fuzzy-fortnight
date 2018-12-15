@@ -3,10 +3,10 @@
     {"id": "a1", "channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544812820421},
     {"id": "a2", "channel": "private", "content": "Ceci est le second message du channel privé","ts": 1544812830622},
     {"id": "a3", "channel": "private", "content": "Incroyable on dirait presque un vrai chat","ts": 1544812880721},
-    {"id": "a4", "channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817890583},
+    {"id": "a4", "channel": "private", "content": "wuw", "ts": 1544817890583},
     {"id": "b1", "channel": "public", "content": "Bonjour, ceci est le premier message du channel public", "ts": 1544817910583},
     {"id": "a5", "channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817980585},
-    {"id": "b2", "channel": "public", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817980788},
+    {"id": "b2", "channel": "public", "content": "Bonjour, ceci est le second message du channel public", "ts": 1544817980788},
     {"id": "b6", "channel": "private", "content": "Bonjour, ceci est le premier message du channel privé", "ts": 1544817990883}
   ]
 }
