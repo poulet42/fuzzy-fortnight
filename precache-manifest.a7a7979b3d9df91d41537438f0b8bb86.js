@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2ae4ecd7552e203ed2e3",
+    "revision": "db3e809375d72dabff08",
     "url": "/fuzzy-fortnight/static/css/main.74a122ef.chunk.css"
   },
   {
-    "revision": "2ae4ecd7552e203ed2e3",
-    "url": "/fuzzy-fortnight/static/js/main.2ae4ecd7.chunk.js"
+    "revision": "db3e809375d72dabff08",
+    "url": "/fuzzy-fortnight/static/js/main.db3e8093.chunk.js"
   },
   {
     "revision": "b52f3d7ed6dbaee5768d",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/fuzzy-fortnight/static/js/runtime~main.9f262e2a.js"
   },
   {
-    "revision": "41e2dd0a0dfee96452bf2f25f0075144",
+    "revision": "807e890898dafcfe66b2859044582b5b",
     "url": "/fuzzy-fortnight/index.html"
   }
 ];
