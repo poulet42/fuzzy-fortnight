@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/fuzzy-fortnight/precache-manifest.bb23a177f10ed45f091f2ae9ba24f87d.js"
+  "/fuzzy-fortnight/precache-manifest.d684c73a2df63846bc8b6506b3176986.js"
 );
 
 workbox.clientsClaim();
