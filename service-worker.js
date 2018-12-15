@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/test-chat/precache-manifest.cf066c5f29b5e1477800ee04f851167f.js"
+  "/fuzzy-fortnight/precache-manifest.bb23a177f10ed45f091f2ae9ba24f87d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/test-chat/index.html", {
+workbox.routing.registerNavigationRoute("/fuzzy-fortnight/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
